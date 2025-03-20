@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xianwei.demo.mapper.UserInfoMapper">
+    <!-- 基础字段映射 -->
+    <resultMap id="BaseResultMap" type="com.xianwei.demo.entity.UserInfo">
+        <id column="UserID" property="userID" />
+        <result column="AccountNumber" property="accountNumber" />
+        <result column="CompanyNumber" property="companyNumber" />
+        <result column="CompanyName" property="companyName" />
+        <result column="VATNumber" property="vatNumber" />
+        <result column="ShippingAddress" property="shippingAddress" />
+        <result column="CompanyAddress" property="companyAddress" />
+        <result column="CreatedAt" property="createdAt" />
+        <result column="UpdatedAt" property="updatedAt" />
+    </resultMap>
+    
+    <!-- 基础字段列表 -->
+    <sql id="Base_Column_List">
+        UserID, AccountNumber, CompanyNumber, CompanyName, VATNumber, ShippingAddress, CompanyAddress, CreatedAt, UpdatedAt
+    </sql>
+    
+    <!-- 注：findByUserID方法已经在UserInfoMapper.java中通过@Select注解定义 -->
+</mapper> 
